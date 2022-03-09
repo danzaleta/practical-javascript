@@ -7,3 +7,7 @@
 <br>
 
 ## Workshop 2: Dsicounts
+
+<br>
+
+## Workshop 3: Mean, median, and mode
