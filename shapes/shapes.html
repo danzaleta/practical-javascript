@@ -5,11 +5,138 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Practical JS | Geometric shapes</title>
+    <style>
+        html{
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        body{
+            margin: 0;
+            font-size: 24px;
+        }
+
+        section{
+            padding: 40px 24px;
+        }
+
+        .square-section{
+            background-color: rgba(181, 236, 110, 0.3);
+        }
+        .triangle-section{
+            background-color: rgba(238, 115, 115, 0.3)
+        }
+        .circle-section{
+            background-color: rgba(111, 223, 238, 0.3);
+        }
+
+        form{
+            gap: 12px;
+        }
+        form div{
+            width: 300px;
+            margin-top: 28px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        form button{
+            width: 100%;
+            margin-top: 12px;
+            padding: 6px;
+            font-size: 24px;
+        }
+        form input{
+            font-size: 24px;
+            padding: 6px 12px;
+        }
+
+        #square{
+            width: 100px;
+            height: 100px;
+            background-color: rgb(182, 236, 110);
+        }
+
+        #triangle {
+            width: 100px;
+            height: 100px;
+            clip-path: polygon(50% 0, 100% 100%, 0 100%);
+            background-color: #ee7373
+        }
+
+        #circle{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: rgb(111, 223, 238);
+        }
+
+        @media (max-width: 640px) {
+            body{
+                text-align: center;
+            }
+            form{
+                display: flex;
+                flex-direction: column;
+            }
+            form div{
+                width: 100%;
+            }
+
+            #square, #triangle, #circle{
+                margin: 2px auto;
+            }
+        }
+
+    </style>
 </head>
 <body>
-    <div>
+    <header>
         <h1>Geometric shapes</h1>
-    </div>
+        <p>Workshop: Practical JavaScript #1</p>
+    </header>
+    
+    <section class="square-section">
+        <div id="square"></div>
+        <h2>Square</h2>
+        <form>
+            <label for="square-input">Given square side value</label>
+            <input type="number" placeholder="side" id="square-input">
+            <div>
+                <button type="button" onclick="SquarePerimeter()">Get perimeter</button>
+                <button type="button" onclick="SquareArea()">Get area</button>
+            </div>
+        </form>
+    </section>
+
+    <section class="triangle-section">
+        <div id="triangle"></div>
+        <h2>Triangle</h2>
+        <form>
+            <label for="triangle-sideA-input">Given triangle sides, base and height values</label>
+            <input type="number" placeholder="side A" id="triangle-sideA-input">
+            <input type="number" placeholder="side B" id="triangle-sideB-input">
+            <input type="number" placeholder="base" id="triangle-base-input">
+            <input type="number" placeholder="height" id="triangle-height-input">
+            <div>
+                <button type="button" onclick="TrianglePerimeter()">Get perimeter</button>
+                <button type="button" onclick="TriangleArea()">Get area</button>
+            </div>
+        </form>
+    </section>
+
+    <section class="circle-section">
+        <div id="circle"></div>
+        <h2>Circle</h2>
+        <form>
+            <label for="circle-input">Given circle radius value</label>
+            <input type="number" placeholder="radius" id="circle-input">
+            <div>
+                <button type="button" onclick="CircleDiameter()">Get diameter</button>
+                <button type="button" onclick="CirclePerimeter()">Get perimeter</button>
+                <button type="button" onclick="CircleArea()">Get area</button>
+            </div>
+        </form>
+    </section>
 
     <script src="./shapes.js"></script>
 </body>
