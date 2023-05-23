@@ -1,15 +1,43 @@
 // Square
-const calcSquarePerimeter = side => side*4;
-const calcSquareArea = side => side**2;
+const calcSquarePerimeter = side => side * 4;
+const calcSquareArea = side => side ** 2;
 
 // Triangle
-const calcTrianglePerimeter = (sideA, sideB, base)=> sideA+sideB+base;
-const calcTriangleArea = (base, height)=> (base*height)/2;
+/**
+ * 
+ * @param {*} sideA 
+ * @param {*} sideB 
+ * @param {*} base 
+ * @returns 
+ */
+const calcTrianglePerimeter = (sideA, sideB, base) => sideA + sideB + base;
+/**
+ * 
+ * @param {*} base 
+ * @param {*} height 
+ * @returns 
+ */
+const calcTriangleArea = (base, height) => (base * height) / 2;
 
 // Circle
-const calcCircleDiameter = radius => radius*2;
-const calcCirclePerimeter = radius => calcCircleDiameter(radius)*Math.PI;
-const calcCircleArea = radius => (radius**2)*Math.PI;
+/**
+ * 
+ * @param {*} radius 
+ * @returns 
+ */
+const calcCircleDiameter = radius => radius * 2;
+/**
+ * 
+ * @param {*} radius 
+ * @returns 
+ */
+const calcCirclePerimeter = radius => calcCircleDiameter(radius) * Math.PI;
+/**
+ * 
+ * @param {*} radius 
+ * @returns 
+ */
+const calcCircleArea = radius => (radius ** 2) * Math.PI;
 
 
 
@@ -28,7 +56,6 @@ function SquareArea() {
     const area = calcSquareArea(value);
     alert(area);
 }
-
 function TrianglePerimeter() {
     const inputA = document.getElementById("triangle-sideA-input");
     const valueA = parseFloat(inputA.value);
@@ -52,7 +79,6 @@ function TriangleArea() {
     const area = calcTriangleArea(base, height);
     alert(area);
 }
-
 function CircleDiameter() {
     const input = document.getElementById("circle-input");
     value = parseFloat(input.value);
