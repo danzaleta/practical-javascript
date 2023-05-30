@@ -1,45 +1,15 @@
 // Square
 const calcSquarePerimeter = side => side * 4;
-const calcSquareArea = side => side ** 2;
+const calcSquareArea = side => Math.pow(side, 2);
 
 // Triangle
-/**
- * 
- * @param {*} sideA 
- * @param {*} sideB 
- * @param {*} base 
- * @returns 
- */
 const calcTrianglePerimeter = (sideA, sideB, base) => sideA + sideB + base;
-/**
- * 
- * @param {*} base 
- * @param {*} height 
- * @returns 
- */
 const calcTriangleArea = (base, height) => (base * height) / 2;
 
 // Circle
-/**
- * 
- * @param {*} radius 
- * @returns 
- */
 const calcCircleDiameter = radius => radius * 2;
-/**
- * 
- * @param {*} radius 
- * @returns 
- */
 const calcCirclePerimeter = radius => calcCircleDiameter(radius) * Math.PI;
-/**
- * 
- * @param {*} radius 
- * @returns 
- */
-const calcCircleArea = radius => (radius ** 2) * Math.PI;
-
-
+const calcCircleArea = radius => (Math.pow(radius, 2)) * Math.PI;
 
 // HTML interaction
 function SquarePerimeter() {
