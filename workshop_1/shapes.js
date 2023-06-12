@@ -49,6 +49,10 @@ function TriangleArea() {
     const area = calcTriangleArea(base, height);
     alert(area);
 }
+function IsoscelesTriangleHeight(side, base) {
+    if (side == base) return alert('Not an isosceles triangle')
+    return Math.sqrt((Math.pow(side, 2)) - (Math.pow(base, 2) / 4))
+}
 function CircleDiameter() {
     const input = document.getElementById("circle-input");
     value = parseFloat(input.value);
@@ -70,3 +74,5 @@ function CircleArea() {
     const area = calcCircleArea(value);
     alert(area);
 }
+
+console.log({ h: IsoscelesTriangleHeight(6, 4) })
